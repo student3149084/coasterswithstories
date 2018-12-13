@@ -19,12 +19,22 @@ $(document).ready(function(){
     });
 })
 
-window.onscroll = function() {scrollFunction()};
+// window.onscroll = function() {scrollFunction()};
 
-function scrollFunction() {
-  if (document.documentElement.scrollTop > 400) {
-    document.getElementsByClassName("grid-container")[0].style.gridTemplateColumns = "repeat(8, 1fr)";
-  } else {
-    document.getElementsByClassName("grid-container")[0].style.gridTemplateColumns = "repeat(4, 1fr)";
-  }
-}
+// function scrollFunction() {
+// 	console.log(document.documentElement.scrollTop);
+//   if (document.documentElement.scrollTop > 400) {
+//     document.getElementsByClassName("grid-container")[0].style.gridTemplateColumns = "repeat(8, 1fr)";
+//   } else {
+//     document.getElementsByClassName("grid-container")[0].style.gridTemplateColumns = "repeat(4, 1fr)";
+//   }
+// }
+
+$("#small-toggle").on("click", function(){
+	$('.grid-container').addClass('small-grid');
+});
+
+$("#large-toggle").on("click", function(){
+	$('.grid-container').removeClass('small-grid');
+})
+	
